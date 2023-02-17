@@ -9,4 +9,4 @@ def browser():
     browser.maximize_window()
     browser.get(url="https://reqres.in/")
     yield browser
-    # browser.quit()
+    browser.quit()
