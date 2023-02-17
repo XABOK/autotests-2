@@ -1,5 +1,5 @@
-from test_reqres_GUI.pages.base_page import BasePage
-from test_reqres_GUI.locators.main_page_locators import MainPageLocators
+from reqres_GUI.pages.base_page import BasePage
+from reqres_GUI.locators.main_page_locators import MainPageLocators
 
 
 class MainPage(BasePage):
