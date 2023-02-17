@@ -9,7 +9,7 @@ def test_list_users(browser):
     WebDriverWait(browser, 10).until(
         EC.element_to_be_clickable(mark=button_list_users)
     ).click()
-    assert browser.find_element(By.CSS_SELECTOR, '[class="response-code"]').text == '200'
+    assert browser.find_element(By.CSS_SELECTOR, '[class="response-code"]').text == '200', 'Другой код ответа'
 
 
 def test_single_user(browser):
@@ -18,10 +18,7 @@ def test_single_user(browser):
     WebDriverWait(browser, 10).until(
         EC.element_to_be_clickable(mark=button_single_user)
     ).click()
-    assert browser.find_element(By.CSS_SELECTOR, '[class="response-code"]').text == '200'
-    WebDriverWait(browser, 10).until(
-        EC.text_to_be_present_in_element(locator=(By.CSS_SELECTOR, '[data-key="output-response"]'), text_='')
-    )
+    assert browser.find_element(By.CSS_SELECTOR, '[class="response-code"]').text == '200', 'Другой код ответа'
 
 
 def test_single_user_not_found(browser):
@@ -30,10 +27,7 @@ def test_single_user_not_found(browser):
     WebDriverWait(browser, 10).until(
         EC.element_to_be_clickable(mark=button_single_user_not_found)
     ).click()
-    assert browser.find_element(By.CSS_SELECTOR, '[class="response-code"]').text == '404'
-    WebDriverWait(browser, 10).until(
-        EC.text_to_be_present_in_element(locator=(By.CSS_SELECTOR, '[data-key="output-response"]'), text_='')
-    )
+    assert browser.find_element(By.CSS_SELECTOR, '[class="response-code"]').text == '404', 'Другой код ответа'
 
 
 def test_list_resource(browser):
@@ -42,10 +36,7 @@ def test_list_resource(browser):
     WebDriverWait(browser, 10).until(
         EC.element_to_be_clickable(mark=button_list_resource)
     ).click()
-    assert browser.find_element(By.CSS_SELECTOR, '[class="response-code"]').text == '200'
-    WebDriverWait(browser, 10).until(
-        EC.text_to_be_present_in_element(locator=(By.CSS_SELECTOR, '[data-key="output-response"]'), text_='')
-    )
+    assert browser.find_element(By.CSS_SELECTOR, '[class="response-code"]').text == '200', 'Другой код ответа'
 
 
 def test_single_resource(browser):
@@ -54,10 +45,7 @@ def test_single_resource(browser):
     WebDriverWait(browser, 10).until(
         EC.element_to_be_clickable(mark=button_single_resource)
     ).click()
-    assert browser.find_element(By.CSS_SELECTOR, '[class="response-code"]').text == '200'
-    WebDriverWait(browser, 10).until(
-        EC.text_to_be_present_in_element(locator=(By.CSS_SELECTOR, '[data-key="output-response"]'), text_='')
-    )
+    assert browser.find_element(By.CSS_SELECTOR, '[class="response-code"]').text == '200', 'Другой код ответа'
 
 
 def test_single_resource_not_found(browser):
@@ -66,10 +54,7 @@ def test_single_resource_not_found(browser):
     WebDriverWait(browser, 10).until(
         EC.element_to_be_clickable(mark=button_single_resource_not_found)
     ).click()
-    assert browser.find_element(By.CSS_SELECTOR, '[class="response-code"]').text == '404'
-    WebDriverWait(browser, 10).until(
-        EC.text_to_be_present_in_element(locator=(By.CSS_SELECTOR, '[data-key="output-response"]'), text_='')
-    )
+    assert browser.find_element(By.CSS_SELECTOR, '[class="response-code"]').text == '404', 'Другой код ответа'
 
 
 def test_post(browser):
@@ -78,10 +63,7 @@ def test_post(browser):
     WebDriverWait(browser, 10).until(
         EC.element_to_be_clickable(mark=button_post)
     ).click()
-    assert browser.find_element(By.CSS_SELECTOR, '[class="response-code"]').text == '201'
-    WebDriverWait(browser, 10).until(
-        EC.text_to_be_present_in_element(locator=(By.CSS_SELECTOR, '[data-key="output-response"]'), text_='')
-    )
+    assert browser.find_element(By.CSS_SELECTOR, '[class="response-code"]').text == '201', 'Другой код ответа'
 
 
 def test_put(browser):
@@ -90,10 +72,7 @@ def test_put(browser):
     WebDriverWait(browser, 10).until(
         EC.element_to_be_clickable(mark=button_put)
     ).click()
-    assert browser.find_element(By.CSS_SELECTOR, '[class="response-code"]').text == '200'
-    WebDriverWait(browser, 10).until(
-        EC.text_to_be_present_in_element(locator=(By.CSS_SELECTOR, '[data-key="output-response"]'), text_='')
-    )
+    assert browser.find_element(By.CSS_SELECTOR, '[class="response-code"]').text == '200', 'Другой код ответа'
 
 
 def test_patch(browser):
@@ -102,10 +81,7 @@ def test_patch(browser):
     WebDriverWait(browser, 10).until(
         EC.element_to_be_clickable(mark=button_patch)
     ).click()
-    assert browser.find_element(By.CSS_SELECTOR, '[class="response-code"]').text == '200'
-    WebDriverWait(browser, 10).until(
-        EC.text_to_be_present_in_element(locator=(By.CSS_SELECTOR, '[data-key="output-response"]'), text_='')
-    )
+    assert browser.find_element(By.CSS_SELECTOR, '[class="response-code"]').text == '200', 'Другой код ответа'
 
 
 def test_delete(browser):
@@ -114,10 +90,7 @@ def test_delete(browser):
     WebDriverWait(browser, 10).until(
         EC.element_to_be_clickable(mark=button_delete)
     ).click()
-    assert browser.find_element(By.CSS_SELECTOR, '[class="response-code"]').text == '200'
-    WebDriverWait(browser, 10).until(
-        EC.text_to_be_present_in_element(locator=(By.CSS_SELECTOR, '[data-key="output-response"]'), text_='')
-    )
+    assert browser.find_element(By.CSS_SELECTOR, '[class="response-code"]').text == '200', 'Другой код ответа'
 
 
 def test_register_successful(browser):
@@ -126,10 +99,7 @@ def test_register_successful(browser):
     WebDriverWait(browser, 10).until(
         EC.element_to_be_clickable(mark=button_register_successful)
     ).click()
-    assert browser.find_element(By.CSS_SELECTOR, '[class="response-code"]').text == '200'
-    WebDriverWait(browser, 10).until(
-        EC.text_to_be_present_in_element(locator=(By.CSS_SELECTOR, '[data-key="output-response"]'), text_='')
-    )
+    assert browser.find_element(By.CSS_SELECTOR, '[class="response-code"]').text == '200', 'Другой код ответа'
 
 
 def test_register_unsuccessful(browser):
@@ -138,10 +108,7 @@ def test_register_unsuccessful(browser):
     WebDriverWait(browser, 10).until(
         EC.element_to_be_clickable(mark=button_register_unsuccessful)
     ).click()
-    assert browser.find_element(By.CSS_SELECTOR, '[class="response-code"]').text == '400'
-    WebDriverWait(browser, 10).until(
-        EC.text_to_be_present_in_element(locator=(By.CSS_SELECTOR, '[data-key="output-response"]'), text_='')
-    )
+    assert browser.find_element(By.CSS_SELECTOR, '[class="response-code"]').text == '400', 'Другой код ответа'
 
 
 def test_login_successful(browser):
@@ -150,10 +117,7 @@ def test_login_successful(browser):
     WebDriverWait(browser, 10).until(
         EC.element_to_be_clickable(mark=button_login_successful)
     ).click()
-    assert browser.find_element(By.CSS_SELECTOR, '[class="response-code"]').text == '200'
-    WebDriverWait(browser, 10).until(
-        EC.text_to_be_present_in_element(locator=(By.CSS_SELECTOR, '[data-key="output-response"]'), text_='')
-    )
+    assert browser.find_element(By.CSS_SELECTOR, '[class="response-code"]').text == '200', 'Другой код ответа'
 
 
 def test_login_unsuccessful(browser):
@@ -162,10 +126,7 @@ def test_login_unsuccessful(browser):
     WebDriverWait(browser, 10).until(
         EC.element_to_be_clickable(mark=button_login_unsuccessful)
     ).click()
-    assert browser.find_element(By.CSS_SELECTOR, '[class="response-code"]').text == '400'
-    WebDriverWait(browser, 10).until(
-        EC.text_to_be_present_in_element(locator=(By.CSS_SELECTOR, '[data-key="output-response"]'), text_='')
-    )
+    assert browser.find_element(By.CSS_SELECTOR, '[class="response-code"]').text == '400', 'Другой код ответа'
 
 
 def test_delay(browser):
@@ -174,7 +135,4 @@ def test_delay(browser):
     WebDriverWait(browser, 10).until(
         EC.element_to_be_clickable(mark=button_delay)
     ).click()
-    assert browser.find_element(By.CSS_SELECTOR, '[class="response-code"]').text == '200'
-    WebDriverWait(browser, 10).until(
-        EC.text_to_be_present_in_element(locator=(By.CSS_SELECTOR, '[data-key="output-response"]'), text_='')
-    )
+    assert browser.find_element(By.CSS_SELECTOR, '[class="response-code"]').text == '200', 'Другой код ответа'
