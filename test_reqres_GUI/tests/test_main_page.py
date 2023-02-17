@@ -47,13 +47,13 @@ class TestMainPage:
         assert status_code == "201", 'Другой код ответа'
 
     def test_put(self, browser):
-        """Проверка обновления пользователя"""
+        """Проверка обновления пользователя методом put"""
         main_page = MainPage(browser)
         status_code = main_page.put()
         assert status_code == "200", 'Другой код ответа'
 
     def test_patch(self, browser):
-        """Проверка обновления пользователя"""
+        """Проверка обновления пользователя методом patch"""
         main_page = MainPage(browser)
         status_code = main_page.patch()
         assert status_code == "200", 'Другой код ответа'
