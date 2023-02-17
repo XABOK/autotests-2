@@ -1,5 +1,5 @@
 # Для установления пакетов / зависимостей:
-pip install requirements.txt
+pip install -r requirements.txt
 
 # Для запуска тестов:
 1. Зайти в терминал
