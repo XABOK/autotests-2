@@ -60,7 +60,7 @@ class MainPage(BasePage):
 
     def login_unsuccessful(self):
         self.element_is_clickable(self.locators.LOGIN_UNSUCCESSFUL).click()
-        return self.element_are_visible(self.locators.STATUS_CODE).text
+        return self.element_are_visible(self.locators.STATUS_CODE_BAD).text
 
     def delay(self):
         self.element_is_clickable(self.locators.DELAY).click()
