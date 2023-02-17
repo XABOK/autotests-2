@@ -1,5 +1,4 @@
-from test_reqres_GUI.pages.main_page import MainPage
-from ..pages.main_page import MainPage
+from reqres_GUI.pages.main_page import MainPage
 
 
 class TestMainPage:
