@@ -5,8 +5,12 @@ from selenium.webdriver.support import expected_conditions as EC
 class BasePage:
     """Общие методы"""
 
-    def __init__(self, browser):
+    def __init__(self, browser, url):
         self.browser = browser
+        self.url = url
+
+    def open(self):
+        self.browser.get(self.url)
 
     def element_is_clickable(self, locator, timeout=10):
         """Является ли элемент кликабельным"""
